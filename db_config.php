@@ -1,5 +1,5 @@
 <?php
-$servername = "sqlXXX.infinityfree.com"; // replace with your InfinityFree MySQL host
+$servername = "sql308.infinityfree.com"; // replace with your InfinityFree MySQL host
 $username = "if0_40341056";
 $password = "JSTxlNjQ45gft";
 $dbname = "if0_40341056_registrations";
