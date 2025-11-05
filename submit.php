@@ -1,20 +1,28 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullname = htmlspecialchars($_POST['fullname']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $gender = htmlspecialchars($_POST['gender']);
-    $address = htmlspecialchars($_POST['address']);
+include 'db_config.php';
 
-    echo "
-    <div style='background:#f3f6fa; padding:20px; border-radius:10px;'>
-        <h3 style='color:#2f80ed;'>Registration Successful!</h3>
-        <p><strong>Name:</strong> $fullname</p>
-        <p><strong>Email:</strong> $email</p>
-        <p><strong>Phone:</strong> $phone</p>
-        <p><strong>Gender:</strong> $gender</p>
-        <p><strong>Address:</strong> $address</p>
-    </div>
-    ";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $gender = $_POST['gender'];
+    $address = $_POST['address'];
+
+    $sql = "INSERT INTO registrations (fullname, email, phone, gender, address)
+            VALUES ('$fullname', '$email', '$phone', '$gender', '$address')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<h3 style='color:green;'>Registration Successful!</h3>
+              <p><strong>Name:</strong> $fullname</p>
+              <p><strong>Email:</strong> $email</p>
+              <p><strong>Phone:</strong> $phone</p>
+              <p><strong>Gender:</strong> $gender</p>
+              <p><strong>Address:</strong> $address</p>";
+    } else {
+        echo "<p style='color:red;'>Error: " . $conn->error . "</p>";
+    }
+
+    $conn->close();
 }
 ?>
+

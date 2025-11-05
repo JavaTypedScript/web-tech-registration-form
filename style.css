@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ca481d, #390aaf);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,9 +10,9 @@ body {
 .container {
     background: white;
     padding: 25px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    width: 400px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    width:400px;
 }
 
 h2 {
@@ -30,7 +30,7 @@ input, select, textarea {
     width: 100%;
     padding: 8px;
     margin-top: 6px;
-    border-radius: 6px;
+    border-radius: 20px;
     border: 1px solid #ccc;
 }
 
@@ -38,7 +38,7 @@ button {
     margin-top: 15px;
     width: 100%;
     padding: 10px;
-    background: #2f80ed;
+    background: linear-gradient(120deg,#5d0ac8,#07ca1e) ;
     color: white;
     border: none;
     border-radius: 8px;
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-    background: #1e5bb8;
+    background: linear-gradient(120deg,#07ca1e,#5d0ac8);
 }
 
 #response {
