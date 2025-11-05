@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#registrationForm').on('submit', function(e) {
-        e.preventDefault(); // prevent normal form submit
+        e.preventDefault();
         $.ajax({
             type: 'POST',
             url: 'submit.php',
