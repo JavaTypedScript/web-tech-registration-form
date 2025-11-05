@@ -12,14 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$fullname', '$email', '$phone', '$gender', '$address')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<h3 style='color:green;'>Registration Successful!</h3>
-              <p><strong>Name:</strong> $fullname</p>
-              <p><strong>Email:</strong> $email</p>
-              <p><strong>Phone:</strong> $phone</p>
-              <p><strong>Gender:</strong> $gender</p>
-              <p><strong>Address:</strong> $address</p>";
+        echo "<h3 style='color:white;'>Registration Successful!</h3>
+              <p style='color:white;'><strong style='color:white;'>Name:</strong> $fullname</p>
+              <p style='color:white;'><strong style='color:white;'>Phone:</strong> $phone</p>
+              <p style='color:white;'><strong style='color:white;'>Email:</strong> $email</p>
+              <p style='color:white;'><strong style='color:white;'>Gender:</strong> $gender</p>
+              <p style='color:white;'><strong style='color:white;'>Address:</strong> $address</p>";
     } else {
-        echo "<p style='color:red;'>Error: " . $conn->error . "</p>";
+        echo "<p style='color:white;'>Error: " . $conn->error . "</p>";
     }
 
     $conn->close();

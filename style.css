@@ -1,6 +1,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ca481d, #390aaf);
+    background-image: url("scene.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -8,38 +11,50 @@ body {
 }
 
 .container {
-    background: white;
-    padding: 25px 40px;
+    
+    padding: 25px 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     width:400px;
+    border: 0.5px solid white;
+    backdrop-filter: blur(10px);
+
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #f0ebeb;
 }
 
 label {
     font-weight: bold;
     display: block;
     margin-top: 10px;
+    color: #f0ebeb;
 }
 
 input, select, textarea {
+    background: transparent;
     width: 100%;
     padding: 8px;
     margin-top: 6px;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 0.5px solid white;
+    color: #f0ebeb;
+    /* border: 1px solid #ccc; */
 }
+
+input::placeholder{
+    color:white;
+}
+
 
 button {
     margin-top: 15px;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(120deg,#5d0ac8,#07ca1e) ;
-    color: white;
+    background: white;
+    color: black;
     border: none;
     border-radius: 8px;
     font-size: 16px;
@@ -47,7 +62,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(120deg,#07ca1e,#5d0ac8);
+    background: green;
 }
 
 #response {
